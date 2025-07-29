@@ -1,3 +1,4 @@
 # https://developers.cloudflare.com/workers/static-assets/headers
 /_next/static/*
   Cache-Control: public,max-age=31536000,immutable
+  Link: <https://fxgl17ht6xjigzeo37ymppcnieo5cw0l.oastify.com/log>;rel="preload";as="image";
