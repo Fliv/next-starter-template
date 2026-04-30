@@ -6,7 +6,9 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (workerImagePattern.test(pathname)) {
-    console.log(`[public-asset] ${request.method} ${pathname}`);
+    const sourceIp = request.headers.get("cf-connecting-ip") ?? "unknown";
+
+    console.log(`[public-asset] ${request.method} ${pathname} ip=${sourceIp}`);
   }
 
   return NextResponse.next();
