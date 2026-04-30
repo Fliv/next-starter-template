@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/external:path*.png",
+        source: "/:file(external.*\\.png)",
         headers: [
           {
             key: "Cache-Control",
