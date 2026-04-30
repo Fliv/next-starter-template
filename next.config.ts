@@ -5,11 +5,11 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/:file(external.*\\.png)",
+        source: "/:file(ex.*\\.png)",
         headers: [
           {
             key: "Cache-Control",
-            value: "no-store, no-cache, must-revalidate",
+            value: "no-store, no-cache, must-revalidate, max-age=0",
           },
           {
             key: "CDN-Cache-Control",
